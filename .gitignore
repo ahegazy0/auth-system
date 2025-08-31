@@ -1,0 +1,54 @@
+# -------------------------
+# FRONTEND (from front/.gitignore)
+# -------------------------
+
+# dependencies
+/front/node_modules
+/front/.pnp
+/front/.pnp.*
+/front/.yarn/*
+!/front/.yarn/patches
+!/front/.yarn/plugins
+!/front/.yarn/releases
+!/front/.yarn/versions
+
+# testing
+/front/coverage
+
+# next.js
+/front/.next/
+/front/out/
+
+/front/build
+
+# misc
+/front/.DS_Store
+/front/*.pem
+
+# debug
+/front/npm-debug.log*
+/front/yarn-debug.log*
+/front/yarn-error.log*
+/front/.pnpm-debug.log*
+
+# env files
+/front/.env*
+
+# vercel
+/front/.vercel
+
+# typescript
+/front/*.tsbuildinfo
+/front/next-env.d.ts
+
+
+# -------------------------
+# BACKEND (from back/.gitignore)
+# -------------------------
+
+/back/node_modules
+/back/.env
+/back/structure.txt
+/back/logs/
+/back/*.log
+

@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #1f2937;       /* gray-800 */
+  --secondary-bg: #374151;     /* gray-700 */
+  --card-bg: #ffffff;
+  --primary-text: #f3f4f6;
+  --secondary-text: #d1d5db;
+  --accent: #3b82f6;           /* blue-500 */
+  --accent-hover: #2563eb;     /* blue-600 */
+  --success: #10b981;          /* green-500 */
+  --error: #ef4444;            /* red-500 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: #1f2937;
+    --primary-text: #f9fafb;
+    --secondary-text: #e5e7eb;
+  }
+}
+
+body {
+  color: var(--primary-text);
+  background: linear-gradient(to bottom, var(--primary-bg), var(--secondary-bg));
+  min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Card base */
+.card {
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: #6b7280; /* gray-500 */
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: #4b5563; /* gray-600 */
+}
+
+.btn-danger {
+  background-color: var(--error);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+.btn-danger:hover {
+  background-color: #dc2626; /* red-600 */
+}
+
+/* Text feedback */
+.text-success {
+  color: var(--success);
+}
+.text-error {
+  color: var(--error);
+}
+
+/* Borders */
+.border-custom {
+  border-color: #4b5563;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container-padding {
+    padding: 1rem;
+  }
+  .mobile-full {
+    width: 100%;
+    border-radius: 0;
+  }
+}
