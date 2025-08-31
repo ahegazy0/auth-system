@@ -8,7 +8,7 @@ A production-ready authentication system featuring:
 - **Email verification & password reset** 
 - **Next.js frontend with animated UI** 
 
-🌐 **Live Frontend:** https://auth-system-ruby.vercel.app/
+🌐 **Live Frontend:** https://auth-system-gilt.vercel.app
 
 ⚙️ **Live API:** https://auth-system-2soh.onrender.com
 
