@@ -227,8 +227,9 @@ class AuthController {
                 Date.now() + process.env.JWT_REFRESH_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
             ),
             httpOnly: true,
-            secure: isProduction,
+            secure: true,
             sameSite: isProduction ? 'none' : 'lax',
+            path:'/',
         };
 
         res.cookie('refreshToken', token, cookieOptions);
