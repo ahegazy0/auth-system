@@ -59,9 +59,9 @@ A production-ready authentication system featuring:
 
 
 # Clone repo
-git clone https://github.com/yourname/Auth-System.git
+git clone https://github.com/ahegazy0/auth-system.git
 
-cd Auth-System
+cd auth-system
 
 # Backend
 cd back
