@@ -10,7 +10,6 @@ A production-ready authentication system featuring:
 
 🌐 **Live Frontend:** https://auth-system-gilt.vercel.app
 
-⚙️ **Live API:** https://auth-system-2soh.onrender.com
 
 🚀 **Postman Collections:** /docs/auth-system.postman_collection
 
