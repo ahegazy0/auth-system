@@ -10,7 +10,7 @@ export default function Dashboard() {
   const router = useRouter()
 
   useEffect(() => {
-    if (!loading && !user) router.push('/login')
+    if (!loading && user === null) router.push('/login')
   }, [loading, user, router])
 
   if (loading) {
@@ -21,7 +21,7 @@ export default function Dashboard() {
     )
   }
 
-  if (!user) return null
+  if (user === null) return null
 
   const handleLogout = async () => {
     await logout()
