@@ -29,7 +29,7 @@ export default function Login(){
       const res = await login(email, password)
       const token = res.accessToken
       setAccessToken(token)
-      const res = await login(email,password);
+      const me = await login(email,password);
       setUser(me.user)
       router.push('/dashboard')
     } catch (err) {
