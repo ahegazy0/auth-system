@@ -22,12 +22,14 @@ return r.data
 }
 
 
-export async function getMe(accessToken: any){
-if (!accessToken) return null
-const r = await fetch(process.env.NEXT_PUBLIC_API_URL + '/api/v1/auth/me', { headers: { Authorization: `Bearer ${accessToken}` } })
-const b = await r.json()
-return b.data.user
+export async function getMe(accessToken: string) {
+  if (!accessToken) return null
+  const r = await api.get('/auth/me', {
+    headers: { Authorization: `Bearer ${accessToken}` }
+  })
+  return r.data.data.user
 }
+
 
 
 export async function logout(accessToken: any){
