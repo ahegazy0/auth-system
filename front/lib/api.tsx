@@ -18,7 +18,7 @@ return r.data
 
 export async function refreshToken(){
 const r = await api.post('/auth/refresh-token')
-return r.data
+return r.data.data.accessToken
 }
 
 
