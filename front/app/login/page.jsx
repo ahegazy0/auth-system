@@ -29,7 +29,7 @@ export default function Login(){
       const res = await login(email, password)
       const token = res.accessToken
       setAccessToken(token)
-      const me = await (await fetch(process.env.NEXT_PUBLIC_API_URL + '/api/v1/auth/me', { headers: { Authorization: `Bearer ${token}` } })).json()
+      const res = await login(email,password);
       setUser(me.user)
       router.push('/dashboard')
     } catch (err) {
