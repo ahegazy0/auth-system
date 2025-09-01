@@ -229,7 +229,6 @@ class AuthController {
             httpOnly: true,
             secure: isProduction,
             sameSite: isProduction ? 'none' : 'lax',
-            domain: isProduction ? '.onrender.com' : undefined,
         };
 
         res.cookie('refreshToken', token, cookieOptions);
