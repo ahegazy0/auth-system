@@ -30,7 +30,7 @@ export default function Login(){
       const token = res.accessToken
       setAccessToken(token)
       const me = await (await fetch(process.env.NEXT_PUBLIC_API_URL + '/api/v1/auth/me', { headers: { Authorization: `Bearer ${token}` } })).json()
-      setUser(me.user)
+      setUser(me.data.user)
       router.push('/dashboard')
     } catch (err) {
       setError(err?.response?.data?.message || 'Login failed')
