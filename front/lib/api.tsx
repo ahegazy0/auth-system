@@ -16,9 +16,9 @@ return r.data
 }
 
 
-export async function refreshToken(){
-const r = await api.post('/auth/refresh-token')
-return r.data.data.accessToken
+export async function refreshToken() {
+  const r = await api.post('/auth/refresh-token')
+  return { accessToken: r.data.data.accessToken }
 }
 
 
