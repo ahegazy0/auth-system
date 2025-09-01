@@ -13,21 +13,20 @@ const [loading, setLoading] = useState(true)
 
 
 useEffect(() => {
-// Attempt silent refresh on mount
-(async () => {
-try {
-const r = await apiRefresh()
-if (r?.data?.accessToken) {
-setAccessToken(r.data.accessToken)
-const me = await getMe(r.data.accessToken)
-setUser(me)
-}
-} catch (e) {
-// ignore
-} finally {
-setLoading(false)
-}
-})()
+  (async () => {
+    try {
+      const { accessToken } = await apiRefresh()
+      if (accessToken) {
+        setAccessToken(accessToken)
+        const me = await getMe(accessToken)
+        setUser(me)
+      }
+    } catch (e) {
+      // ignore
+    } finally {
+      setLoading(false)
+    }
+  })()
 }, [])
 
 
